@@ -80,15 +80,18 @@ export default function MindBot() {
   return (
     <div className="flex-1 p-8 bg-background min-h-screen">
       <div className="max-w-4xl mx-auto space-y-8">
-        <div className="text-center space-y-4">
-          <div className="flex items-center justify-center gap-2">
-            <Heart className="h-8 w-8 text-primary" />
-            <h1 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Mind-Bot
+        <div className="text-center space-y-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-accent text-accent-foreground text-sm font-medium shadow-glow">
+            💝 Mental Wellness Support
+          </div>
+          <div className="flex items-center justify-center gap-3">
+            <Heart className="h-10 w-10 text-primary" />
+            <h1 className="text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              Mental Wellness Bot
             </h1>
           </div>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Your AI companion for mental wellness and emotional support
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Your compassionate AI companion providing 24/7 emotional support, guidance, and mental wellness resources
           </p>
         </div>
 

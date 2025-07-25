@@ -78,15 +78,18 @@ export default function ConsultDoctor() {
   return (
     <div className="flex-1 p-8 bg-background min-h-screen">
       <div className="max-w-6xl mx-auto space-y-8">
-        <div className="text-center space-y-4">
-          <div className="flex items-center justify-center gap-2">
-            <Stethoscope className="h-8 w-8 text-primary" />
-            <h1 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Consult Doctor
+        <div className="text-center space-y-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-accent text-accent-foreground text-sm font-medium shadow-glow">
+            👨‍⚕️ Expert Healthcare
+          </div>
+          <div className="flex items-center justify-center gap-3">
+            <Stethoscope className="h-10 w-10 text-primary" />
+            <h1 className="text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              Expert Consultations
             </h1>
           </div>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Find and book appointments with qualified healthcare professionals
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Connect with verified healthcare professionals and book appointments with top specialists in your area
           </p>
         </div>
 

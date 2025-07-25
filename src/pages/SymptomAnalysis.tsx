@@ -33,15 +33,18 @@ export default function SymptomAnalysis() {
   return (
     <div className="flex-1 p-8 bg-background min-h-screen">
       <div className="max-w-4xl mx-auto space-y-8">
-        <div className="text-center space-y-4">
-          <div className="flex items-center justify-center gap-2">
-            <Brain className="h-8 w-8 text-primary" />
-            <h1 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Symptom Analysis
+        <div className="text-center space-y-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-accent text-accent-foreground text-sm font-medium shadow-glow">
+            🧠 AI-Powered Analysis
+          </div>
+          <div className="flex items-center justify-center gap-3">
+            <Brain className="h-10 w-10 text-primary" />
+            <h1 className="text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              AI Symptom Analyzer
             </h1>
           </div>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Describe your symptoms and get AI-powered insights to help understand what might be happening
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Describe your symptoms in detail and receive intelligent AI-powered insights to better understand your health condition
           </p>
         </div>
 
