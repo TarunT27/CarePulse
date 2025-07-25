@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Heart, Activity, Brain, Stethoscope, Home, Zap } from "lucide-react";
+import { Activity, Brain, Stethoscope, Home, Zap } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const navigationItems = [
