@@ -1,58 +1,78 @@
-import { FeatureCard } from "@/components/FeatureCard";
 import { Activity, Brain, Stethoscope } from "lucide-react";
-import heroImage from "@/assets/carepulse-hero.png";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
-    <div className="flex-1 p-8 bg-background min-h-screen">
-      <div className="max-w-6xl mx-auto space-y-12">
+    <div className="flex-1 min-h-screen text-white">
+      <div className="max-w-4xl mx-auto px-8 py-16 space-y-16">
         {/* Hero Section */}
-        <div className="text-center space-y-8">
-          <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-accent text-accent-foreground text-sm font-medium shadow-glow">
-              ✨ AI-Powered Healthcare Assistant
+        <div className="text-center space-y-12">
+          <div className="space-y-8">
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium">
+              ⚡ AI Clinical Decision Support
             </div>
-            <h1 className="text-6xl font-bold bg-gradient-hero bg-clip-text text-transparent leading-tight">
+            <h1 className="text-7xl font-light text-white leading-tight tracking-tight">
               CarePulse
             </h1>
-            <h2 className="text-3xl font-semibold text-foreground/90">
-              Your Smart Health Companion
+            <h2 className="text-2xl font-normal text-white/90 tracking-wide">
+              AI Clinical Decision Support
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Experience the future of healthcare with AI-powered symptom analysis, mental wellness support, and seamless doctor consultations - all in one intelligent platform.
-            </p>
-          </div>
-          
-          <div className="relative max-w-2xl mx-auto">
-            <div className="absolute inset-0 bg-gradient-hero rounded-3xl blur-2xl opacity-20"></div>
-            <img 
-              src={heroImage} 
-              alt="CarePulse AI Healthcare Assistant" 
-              className="relative w-full h-auto rounded-3xl shadow-glow border border-white/20"
-            />
+            
+            {/* Main Search Input */}
+            <div className="max-w-2xl mx-auto mt-12">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="How can I help you?"
+                  className="w-full px-6 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl text-white placeholder-white/60 text-lg focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition-all"
+                />
+                <div className="absolute left-6 -bottom-8 text-white/50 text-sm">
+                  💡 Deep Reasoning
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          <FeatureCard
-            title="AI Symptom Analyzer"
-            description="Get instant AI-powered insights into your symptoms with advanced machine learning analysis"
-            icon={Activity}
-            href="/symptom-analysis"
-          />
-          <FeatureCard
-            title="Mental Wellness Bot"
-            description="Your 24/7 AI companion for mental health support, stress management, and emotional guidance"
-            icon={Brain}
-            href="/mind-bot"
-          />
-          <FeatureCard
-            title="Expert Consultations"
-            description="Connect with verified healthcare professionals and book appointments seamlessly"
-            icon={Stethoscope}
-            href="/consult-doctor"
-          />
+        {/* Quick Actions Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+          <Link 
+            to="/symptom-analysis"
+            className="flex items-center gap-3 px-4 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white hover:bg-white/15 transition-all text-sm"
+          >
+            <Activity className="h-4 w-4" />
+            Symptom Analysis
+          </Link>
+          <Link 
+            to="/mind-bot"
+            className="flex items-center gap-3 px-4 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white hover:bg-white/15 transition-all text-sm"
+          >
+            <Brain className="h-4 w-4" />
+            Mental Wellness
+          </Link>
+          <Link 
+            to="/consult-doctor"
+            className="flex items-center gap-3 px-4 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white hover:bg-white/15 transition-all text-sm"
+          >
+            <Stethoscope className="h-4 w-4" />
+            Consult Doctor
+          </Link>
+          <button className="flex items-center gap-3 px-4 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white hover:bg-white/15 transition-all text-sm">
+            📊 Ask a Question
+          </button>
+          <button className="flex items-center gap-3 px-4 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white hover:bg-white/15 transition-all text-sm">
+            📋 Health Summary
+          </button>
+          <button className="flex items-center gap-3 px-4 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white hover:bg-white/15 transition-all text-sm">
+            📖 Instructions
+          </button>
+        </div>
+
+        {/* Footer */}
+        <div className="text-center">
+          <p className="text-white/40 text-xs max-w-2xl mx-auto leading-relaxed">
+            Our CarePulse AI Clinical Decision Support platform is designed to enhance the clinical decision-making processes of clinicians. Our AI CDS generates drafts of differential diagnoses, assessments & plans, and answers to clinical reference questions. The available core features of the platform are not designed for use and should not be used for acquiring, processing, or analyzing medical images. CarePulse v2.5.42
+          </p>
         </div>
       </div>
     </div>

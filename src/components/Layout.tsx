@@ -6,7 +6,7 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   return (
-    <div className="flex h-screen bg-background">
+    <div className="flex h-screen">
       <SidebarNav />
       {children}
     </div>
